@@ -5,7 +5,16 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const Home: NextPage = ({ posts }) => {
+interface HomePageProps {
+  posts: {
+    frontMatter: {
+      [key: string]: any
+    }
+    postId: string
+  }[]
+}
+
+const Home: NextPage<HomePageProps> = ({ posts }: HomePageProps) => {
   return (
     <main className="mt-4 flex flex-col space-y-6">
       <h2 className="text-2xl font-bold selection:bg-yellow-300">Artículos</h2>
