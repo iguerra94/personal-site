@@ -11,7 +11,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap"
             rel="stylesheet"
           />
-          <title>Blog - Iván Guerra</title>
         </Head>
         <body className="mx-auto font-montserrat xl:max-w-5xl">
           <header className="flex items-center justify-between py-5 font-semibold">
