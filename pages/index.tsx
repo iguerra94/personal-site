@@ -30,7 +30,7 @@ const Home: NextPage<HomePageProps> = ({ posts }: HomePageProps) => {
           {posts.map((post: any, index: number) => (
             <Link href={'/blog/' + post.postId} passHref key={index}>
               <article className="flex h-[200px] cursor-pointer space-y-3 shadow-custom transition-all duration-200 hover:scale-105 hover:bg-gray-100/75">
-                <div className="flex flex-1 flex-col p-4">
+                <div className="flex flex-1 flex-col justify-evenly p-4">
                   <h5 className="pb-2 text-lg font-semibold">
                     {post.frontMatter.title}
                   </h5>
