@@ -6,7 +6,7 @@ import matter from 'gray-matter'
 import Head from 'next/head'
 import Link from 'next/link'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
-import { CopyBlock } from 'react-code-blocks'
+import { CodeBlock } from 'react-code-blocks'
 
 export const getStaticPaths = async () => {
   const files = fs.readdirSync(path.join('posts'))
@@ -63,7 +63,7 @@ const PostPage = ({
           </a>
         </Link>
         <h1 className="my-8 text-lg font-bold">{title}</h1>
-        <MDXRemote {...mdxSource} components={{ CopyBlock }} />
+        <MDXRemote {...mdxSource} components={{ CodeBlock }} />
       </div>
     </>
   )
